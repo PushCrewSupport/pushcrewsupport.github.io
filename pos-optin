@@ -1,0 +1,339 @@
+<html>
+<head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+    (function(p,u,s,h){
+        p._pcq=p._pcq||[];
+        p._pcq.push(['_currentTime',Date.now()]);
+        s=u.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src='https://cdn.pushcrew.com/js/22642246497f741ac3a2cf0c413693a7.js';
+        h=u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s,h);
+    })(window,document);
+</script>
+<script>
+	_pcq.push(['triggerOptIn']);
+	</script>
+	<style type="text/css">
+		/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.close:hover,
+.close:focus {
+  box-shadow: inset -4.5em 0 0 0 var(--hover), inset 4.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 10.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+button {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+body {
+  color: #fff;
+  background: #17181c;
+  font: 300 1em 'Fira Sans', sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 100;
+  color: #fff;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}
+.top-left{
+        left: 0 !important;
+    }
+.top-right{
+        left: calc(100% - 422px) !important;
+    }
+.center-left{
+	position: auto;
+	top: calc(50% - 85px) !important;
+	left: 0 !important;
+}
+.center{
+	top: calc(50% - 85px) !important;
+}
+.center-right{
+top: calc(50% - 85px) !important;
+left: calc(100% - 422px) !important;
+}
+.bottom-left{
+	top: calc(100% - 185px) !important;
+	left: 0 !important;
+}
+.bottom-center{
+	top: calc(100% - 185px) !important;
+}
+.bottom-right{
+top: calc(100% - 185px) !important;
+left: calc(100% - 422px) !important;
+}
+	</style>
+	    <style type="text/css">
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #F0EFF0;
+    margin: 2px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.closed {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closed:hover {
+    cursor: pointer;
+}
+</style>
+	</head>
+	<body>
+<div class="buttons">
+  <h1>Click below buttons to get the <code>PushCrew opt-in</code> view & code</h1>
+  <button class="fill" onClick="tl()">Top Left</button>
+  <button class="pulse" onClick="tc()">Top Center</button>
+  <button class="close" onClick="tr()">Top Right</button>
+  <button class="raise" onClick="cl()">Center Left</button>
+  <button class="up" onClick="c()">Center</button>
+  <button class="slide" onClick="cr()">Center Right</button>
+  <button class="offset" onClick="bl()">Bottom Left</button>
+  <button class="pulse" onClick="bc()">Bottom Center</button>
+  <button class="offset" onClick="br()">Bottom Right</button>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+	<h3> Paste the following just below PushCrew smart code JS</h3>
+  <!-- Modal content -->
+  <div class="modal-content">
+  	
+  <!--  <span class="closed" id="close" onClick="modal.style.display = 'none';">&times;</span> -->
+<dic>
+<textarea id="csscode" cols="40" rows="6" readonly></textarea>
+</dic>
+</div>
+</div>
+<script>
+var modal = document.getElementById('myModal');
+function tl()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('top-left');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     left: 0 !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function tr()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('top-right');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     left: calc(100% - 422px) !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function tc()
+{
+	alert("Being over smart? Huh? HAHAHA!!! You just need the PushCrew Smart Code to do this! ;)");
+	modal.style.display = 'none';
+}
+function cl()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('center-left');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     top: calc(50% - 85px) !important;\n	left: 0 !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function c()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('center');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     top: calc(50% - 85px) !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function cr()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('center-right');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     top: calc(50% - 85px) !important;\nleft: calc(100% - 422px) !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function bl()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('bottom-left');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     top: calc(100% - 185px) !important;\n	left: 0 !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function bc()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('bottom-center');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     top: calc(100% - 185px) !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function br()
+{
+addremove();
+$('.pushcrew-chrome-style-notification').addClass('bottom-right');
+$('#csscode').val('<style type="text/css">\n.pushcrew-chrome-style-notification-safari{\n     top: calc(100% - 185px) !important;\nleft: calc(100% - 422px) !important;\n}\n</style>');
+modal.style.display = 'block';
+}
+function addremove()
+{
+$('.pushcrew-chrome-style-notification').removeClass().addClass('pushcrew-chrome-style-notification');
+$('.pushcrew-chrome-style-notification').addClass('pushcrew-chrome-style-notification-safari');	
+modal.style.display = 'block';
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+</body>
+</html>
+
