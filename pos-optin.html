@@ -212,24 +212,13 @@ left: calc(100% - 422px) !important;
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #F0EFF0;
+    background-color: #fff;
     margin: 2px auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
-    width: 20%; /* Could be more or less, depending on screen size */
+    width: auto; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
-.closed {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.closed:hover {
-    cursor: pointer;
-}
 </style>
 	</head>
 	<body>
@@ -249,14 +238,13 @@ left: calc(100% - 422px) !important;
 <div id="myModal" class="modal">
 	<h3> Paste the following just below PushCrew smart code JS</h3>
   <!-- Modal content -->
-  <div class="modal-content">
+ 
   	
-  <!--  <span class="closed" id="close" onClick="modal.style.display = 'none';">&times;</span> -->
-<dic>
-<textarea id="csscode" cols="40" rows="6" readonly></textarea>
-</dic>
+<div>
+<textarea class="modal-content" id="csscode" cols="40" rows="7" readonly></textarea>
 </div>
 </div>
+
 <script>
 var modal = document.getElementById('myModal');
 function tl()
