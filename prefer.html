@@ -1,0 +1,153 @@
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106964948-2"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106964948-2');
+</script>
+  <meta name="google-signin-client_id" content="387609178577-uvk80pi6bbjiug8mtk62pck5tav6takc.apps.googleusercontent.com">
+<script type="text/javascript">
+  (function(p,u,s,h){
+      p._pcq=p._pcq||[];
+      p._pcq.push(['_currentTime',Date.now()]);
+      s=u.createElement('script');
+      s.type='text/javascript';
+      s.async=true;
+      s.src='https://cdn.pushcrew.com/js/3680c4bdbefedd471b12397ba717757e.js';
+      h=u.getElementsByTagName('script')[0];
+      h.parentNode.insertBefore(s,h);
+  })(window,document);
+</script>
+<script type="text/javascript">
+ /* document.cookie = 'wingify_push_do_not_show_notification_popup=true';
+  _pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
+function callbackOnAPIReady()
+{
+  _pcq.push(['triggerOptIn']);
+}*/
+</script>
+<style type="text/css">
+      body {
+  color: #000;
+  background: #fff;
+  font: 300 1em 'Fira Sans', sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*.pushcrew-notification-title-safari {
+  direction: rtl !important;
+}
+.pushcrew-notification-message-safari {
+  direction: rtl !important;
+}
+span.pushcrew-notification-title-safari {
+    direction: rtl !important;
+    unicode-bidi: bidi-override !important;
+    text-align: right !important;
+    float: right !important;
+}
+.pushcrew-notification-message-safari {
+    direction: rtl !important;
+    unicode-bidi: bidi-override !important;
+    text-align: right !important;
+    float: right !important;
+}
+</style>
+</head>
+<body>
+<!--<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<h1>
+<a onclick="_pcq.push(['triggerOptIn']);">
+<u>GET NOTIFICATIONS<u>
+</a>-->
+<div>
+  <h1> This is a demo for prefernce settings and one-click unsubscribe overlap</h1>
+  <button id='button1'> This is a simple button </button>
+  </div>
+  <h1 id="msg"></h1>
+  <script>
+    function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+  </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+ <!-- <a href="#" onclick="signOut();">Sign out</a>-->
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+  auth2.disconnect();
+      console.log('User signed out.');
+    });
+  }
+</script>
+<script type="text/javascript">
+/*
+//window._pcq = window._pcq || [];
+_pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
+function callbackOnAPIReady()
+{
+  if(!pushcrew.subscriberId)
+  {
+    document.getElementById("msg").innerHTML = 'Click allow';
+  }
+  else if(pushcrew.subscriberId==-1)
+  {
+        document.getElementById("msg").innerHTML = 'Unblock it';
+  }
+  else
+  {
+        document.getElementById("msg").innerHTML = 'Already subscribed';
+  }
+}
+//_pcq.push(['subscriptionSuccessCallback',callbackOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
+/*
+function callbackOnAPIReady() {
+    if(window.location.href.indexOf("clients=true") > -1) {
+        _pcq.push(['addSubscriberToSegment', 'Clients', callbackForAddToSegment]);
+    function callbackForAddToSegment() {
+    console.log("Added to segment!");
+    }
+    }
+}*/
+
+</script>
+
+<!--
+<script type="text/javascript">
+  var mwidth = $(window).width();
+    if(mwidth < 990){
+     _pcq.push(['APIReady', callbackFunction]); //check for the readiness of the pushcrew API
+function callbackFunction() {
+_pcq.push(['triggerOptIn']);
+    }
+  }
+</script>  
+-->
+</body>
+</html>
+
