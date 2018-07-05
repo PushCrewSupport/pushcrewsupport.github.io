@@ -16,8 +16,12 @@
     })(window,document);
 </script>
 <script type="text/javascript">
-_pcq.push(['APIReady', function() {
-    window._pcq = window._pcq || [];
+//window._pcq = window._pcq || [];
+_pcq.push(['APIReady', callback]); //will execute callback function when PushCrew API is ready
+
+function callback() {
+    //now api is ready
+     window._pcq = window._pcq || [];
 _pcq.push(['noTrigger',true]); //disables automatic opt-in
 }
 </script>
