@@ -21,6 +21,7 @@ _pcq.push(['APIReady', callback]); //will execute callback function when PushCre
 
 function callback() {
     //now api is ready
+    console.log("inside api call");
      window._pcq = window._pcq || [];
 _pcq.push(['noTrigger',true]); //disables automatic opt-in
 }
