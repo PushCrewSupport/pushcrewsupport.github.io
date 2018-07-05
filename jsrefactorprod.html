@@ -48,7 +48,9 @@ function callback() {
     console.log("inside api call");
             console.log(pushcrew.subscriberId);
 
-     window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]);
+     //window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]);
+        _pcq.push(['triggerOptIn',{modal: {text: {ALREADYSUBSCRIBED: 'Saurabh, Congrats! You are already subscribed to the Push Notifications'}, blackenBackground: true}}]);
+
 //_pcq.push(['noTrigger',true]); //disables automatic opt-in
 }
         //console.log(pushcrew.subscriberID);
