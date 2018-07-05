@@ -13,6 +13,18 @@ function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
     console.log(values.message) // 'User has subscribed to push notifications.' or 'User is already subscribed to push notifications.'
     console.log('Now you may run code which should be executed once user gets successfully subscribed.');
 }
+             window._pcq = window._pcq || [];
+_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
+
+function callbackFunctionOnFailedSubscription(values) {
+    console.log('User could not get subscribed to push notifications');
+
+    console.log(values.status); // BLOCKED , UNSUBSCRIBED or CANCELLED
+
+    console.log(values.message) // 'User has blocked push notifications.', 'User has unsubscribed from push notifications', 'No change in subscription. Child window was closed.' or 'User has closed the notifications opt-in.'
+
+    console.log('Now you may run code which should be executed once user subscription fails');
+}
         </script>
 <script type="text/javascript">
     (function(p,u,s,h){
