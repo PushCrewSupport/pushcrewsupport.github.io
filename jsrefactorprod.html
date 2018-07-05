@@ -17,12 +17,9 @@
 </script>
 <script type="text/javascript">
 _pcq.push(['APIReady', function() {
-    if (document.cookie.match(new RegExp('(^| )' + "UserStatus" + '=([^;]+)'))[2] === 'Guest') {
-            setTimeout(function() {
-                _pcq.push(['triggerOptIn']);
-            }, 5000);  //This value is in milliseconds (5000 ms = 5 sec) for the delay to show opt-in, you can change this accordingly.
-        }
- }]);
+    window._pcq = window._pcq || [];
+_pcq.push(['noTrigger',true]); //disables automatic opt-in
+}
 </script>
 
     </head>
