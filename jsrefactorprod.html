@@ -48,8 +48,10 @@ function callback() {
     //now api is ready
     console.log("inside api call");
             console.log(pushcrew.subscriberId);
+    
+    _pcq.push(['triggerOptOut']);
 
-     _pcq.push(['triggerOptIn',{subscriberSegment: 'homepage   234', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]);
+     _pcq.push(['triggerOptIn',true]);
         //_pcq.push(['triggerOptIn',{modal: {text: {ALREADYSUBSCRIBED: 'Saurabh, Congrats! You are already subscribed to the Push Notifications'}, blackenBackground: true}}]);
         //_pcq.push(['triggerOptIn',{modal: {text: {BLOCKED: 'Saurabh, You have blocked the notifications!'}, blackenBackground: true}}]);
 
