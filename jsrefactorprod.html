@@ -48,7 +48,7 @@ function callback() {
     //now api is ready
     console.log("inside api call");
             console.log(pushcrew.subscriberId);
-    
+    _pcq.push(['triggerPreferences']);
     _pcq.push(['triggerOptOut']);
 
      _pcq.push(['triggerOptIn']);
@@ -98,5 +98,9 @@ function callback() {
         <h1> PROD </h1>
         </br>
  <h1> This is a test for JS Refactor code </h1>
+    <button onclick="_pcq.push(['triggerPreferences']);">
+  PREFERENCE SETTINGS
+</button>
+    
     </body>
 </html>
