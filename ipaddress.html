@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Geo Location Demo</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    </head>
+    <body>
+        <!--
+<script type="text/javascript">
+$.getJSON("https://freegeoip.net/json?callback=?", function(data) {
+    var cc = data.country_code;
+    //console.log(data);
+    if (cc !== 'ZA' && cc !== 'US' && cc !== 'AF' && cc !== 'AS' && cc !== 'AU' && cc !== 'CW' && cc !== 'CZ' && cc !== 'GU' && cc !== 'HU' && cc !== 'XK' && cc !== 'LY' && cc !== 'NL' && cc !== 'AN' && cc !== 'NE' && cc !== 'KP' && cc !== 'PK' && cc !== 'PR' && cc !== 'UM' && cc !== 'VI' && cc !== 'GB' && cc !== 'ES') {
+        (function(p, u, s, h) {
+            p._pcq = p._pcq || [];
+            p._pcq.push(['_currentTime', Date.now()]);
+            s = u.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://cdn.pushcrew.com/js/3680c4bdbefedd471b12397ba717757e.js';
+            h = u.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document);
+    }
+});
+</script>
+-->
+<h1> This is the demo for geo location</h1>
+ <script type="text/javascript">
+     if(Cookies.get("wingify_push_subscriber_id"))
+        console.log("found");
+    else
+        console.log("not found");
+ </script>
+
+<script type="text/javascript">
+$.getJSON("https://ipinfo.io", function(data) {
+    var cc = data.country;
+    console.log(cc);
+    if (cc !== 'ZA' && cc !== 'US' && cc !== 'AF' && cc !== 'AS' && cc !== 'AU' && cc !== 'CW' && cc !== 'CZ' && cc !== 'GU' && cc !== 'HU' && cc !== 'XK' && cc !== 'LY' && cc !== 'NL' && cc !== 'AN' && cc !== 'NE' && cc !== 'KP' && cc !== 'PK' && cc !== 'PR' && cc !== 'UM' && cc !== 'VI' && cc !== 'GB' && cc !== 'ES') {
+        (function(p, u, s, h) {
+            p._pcq = p._pcq || [];
+            p._pcq.push(['_currentTime', Date.now()]);
+            s = u.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src='https://cdn.pushcrew.com/js/0db529cc21727e0384fe0db574b4925f.js';
+            h = u.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document);
+    }
+},"jsonp");
+
+
+
+  /*       $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+            var cc = data.countryCode;
+            console.log(data.countryCode);
+             if (cc === 'BR') {
+        (function(p, u, s, h) {
+            p._pcq = p._pcq || [];
+            p._pcq.push(['_currentTime', Date.now()]);
+            s = u.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://cdn.pushcrew.com/js/7140e9ebe9d7e4b23582b387fbff858d.js';
+            h = u.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document);
+    }
+        });*/
+        </script>
+
+    </body>
+</html>
