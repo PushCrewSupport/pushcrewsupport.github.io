@@ -15,6 +15,17 @@ p._pcq.push(['noTrigger',true]);
       h.parentNode.insertBefore(s,h);
   })(window,document);
 </script>
+	<script>
+		_pcq.push(['APIReady', callbackOnSuccessFunction,callbackOnFailureFunction]); //will execute callback function when PushCrew API is ready
+
+function callbackOnSuccessFunction() {
+    console.log("now api is ready");
+}
+
+function callbackOnFailureFunction(values) {
+    console.log(values.reasons) //It will give you the array of reasons why PushCrew API could not get ready .For eg:- ["PRIVATE_BROWSING", "BROWSER_NOT_SUPPORTED"] etc.
+}
+	</script>
 </head>
 <body>
 <h1>Safari Test in progress</h1>
