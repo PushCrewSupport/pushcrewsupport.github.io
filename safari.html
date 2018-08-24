@@ -21,6 +21,7 @@ p._pcq.push(['noTrigger',true]);
 function callbackOnSuccessFunction() {
     console.log("now api is ready");
 	console.log(pushcrew.subscriberId);
+	_pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]);
 }
 
 function callbackOnFailureFunction(values) {
