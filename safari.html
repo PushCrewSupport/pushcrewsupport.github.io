@@ -2,6 +2,21 @@
 <html>
 <head>
 	<title>This is Safari Test</title>
+	<script>
+		_pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
+
+function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
+    console.log('User got successfully subscribed.');
+
+    console.log(subscriberId); //will output the user's subscriberId
+
+    console.log(values.status); // SUBSCRIBED or ALREADYSUBSCRIBED
+
+    console.log(values.message) // 'User has subscribed to push notifications.' or 'User is already subscribed to push notifications.'
+
+    console.log('Now you may run code which should be executed once user gets successfully subscribed.');
+}
+	</script>
 	<script type="text/javascript">
   (function(p,u,s,h){
       p._pcq=p._pcq||[];
