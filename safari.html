@@ -23,22 +23,9 @@ function callbackOnSuccessFunction() {
     console.log("now api is ready");
 	console.log(pushcrew.subscriberId);
 	_pcq.push(['triggerOptIn']);
-	_pcq.push(['addSubscriberToSegment', 'homepage. 2', callbackForAddToSegment]);
+	
 }
 
-function callbackForAddToSegment(response) {
-    if(response === -1) {
-        console.log('User is not a subscriber or has blocked notifications');
-    }
-  
-    if(response === false) {
-        console.log('Segment name provided is not valid. Maximum length of segment name can be 30 chars and it can only contain alphanumeric characters, underscore and dash.');
-    }
-  
-    if(response === true) {
-        console.log('User got added to the segment successfully. Now you may run any code you wish to execute after user gets added to segment successfully');
-    }
-}
 
 function callbackOnFailureFunction(values) {
     console.log(values.reasons) //It will give you the array of reasons why PushCrew API could not get ready .For eg:- ["PRIVATE_BROWSING", "BROWSER_NOT_SUPPORTED"] etc.
@@ -57,6 +44,7 @@ function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
     console.log(values.message) // 'User has subscribed to push notifications.' or 'User is already subscribed to push notifications.'
 
     console.log('Now you may run code which should be executed once user gets successfully subscribed.');
+	_pcq.push(['addSubscriberToSegment', 'homepage2']);
 }
 		_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
 
