@@ -22,7 +22,7 @@ p._pcq.push(['noTrigger',true]);
 function callbackOnSuccessFunction() {
     console.log("now api is ready");
 	console.log(pushcrew.subscriberId);
-	_pcq.push(['triggerOptIn']);
+	_pcq.push(['triggerOptIn', {subscriberSegment: 'homepage3'}]);
 	
 }
 
@@ -44,7 +44,7 @@ function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
     console.log(values.message) // 'User has subscribed to push notifications.' or 'User is already subscribed to push notifications.'
 
     console.log('Now you may run code which should be executed once user gets successfully subscribed.');
-	_pcq.push(['addSubscriberToSegment', 'homepage2']);
+	
 }
 		_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
 
