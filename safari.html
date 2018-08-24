@@ -61,6 +61,8 @@ function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
 
     console.log('Now you may run code which should be executed once user gets successfully subscribed.');
 	
+	_pcq.push(['triggerPreferences', 'Modal Title', 'Start Button', 'Stop Button', 'Access Data Button', 'Delete Data Button']);
+	
 }
 		_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
 
