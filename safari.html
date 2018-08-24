@@ -36,7 +36,7 @@ p._pcq.push(['noTrigger',true]);
 function callbackOnSuccessFunction() {
     console.log("now api is ready");
 	console.log(pushcrew.subscriberId);
-	_pcq.push(['triggerOptIn',{modal: {text: {BLOCKED: 'You have Blocked Push Notifications. To know how to unblock'}, blackenBackground: true}}]);
+	_pcq.push(['triggerOptIn']);
 }
 
 function callbackOnFailureFunction(values) {
