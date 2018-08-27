@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> This is one - signal test </title>
+<link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f53bcfd6-0f0a-456b-995e-4ed3d84fb4e4",
+      autoRegister: false,
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+</head>
+<body>
+<h1> This is one - signal test </h1>
+</body>
+</html>
