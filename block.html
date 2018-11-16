@@ -1,0 +1,122 @@
+<html>
+<head>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://www.detur.se/Scripts/WebUI/jquery.cookie.js"></script>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+      body {
+  color: #fff;
+  background: #17181c;
+  font: 300 1em 'Fira Sans', sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+</style>
+
+<script type="text/javascript">
+    (function(p,u,s,h){
+        p._pcq=p._pcq||[];
+        p._pcq.push(['_currentTime',Date.now()]);
+        s=u.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src='https://cdn.pushcrewstaging.com/js/18ecdd701099f769c4c414faef395470.js';
+        h=u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s,h);
+    })(window,document);
+  </script>
+
+
+<script type="text/javascript">
+/*window.onbeforeunload = function() {
+    return "Are you sure 1234?";
+ };*/
+ 
+
+ _pcq.push(['APIReady', callbackFunction]); //check for the readiness of the pushcrew API
+function callbackFunction() {
+  var getNotif = document.getElementById("getNotif");
+ var text = document.getElementById("text");
+  if (!pushcrew.subscriberId){
+ getNotif.style.display = "block"; 
+}
+else if(pushcrew.subscriberId===-1)
+{
+text.innerHTML = "Blocked notifications";
+}
+else
+{
+ text.innerHTML = "Successfully subscribed to Notifications"; 
+}
+}
+
+function showOptin() {
+  
+  //if(screen.width > 990)
+       _pcq.push(['triggerOptIn']);
+getNotif.style.display = "block";
+}
+/*window.addEventListener("click",clickLogger);
+    function clickLogger() {
+        modal.style.display = "none";
+    }
+}*/
+_pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
+_pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]); //registers callback function to be called when user gets successfully subscribed
+
+function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
+  getNotif.style.display = "none";
+  text.innerHTML = "Successfully subscribed to Notifications";
+  }
+  function callbackFunctionOnFailedSubscription(subscriberId, values) {
+  getNotif.style.display = "none";
+  text.innerHTML = "Blocked notifications";
+  }
+
+
+</script>
+
+<script>
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+_pcq.push(['tag', 'name', getUrlParameter('a')]);
+console.log(getUrlParameter('a'));
+</script>
+
+
+</head>
+
+<body>
+
+<div>
+  <h1> This is a demo for eLearning Industry</h1>
+  <div>
+    <h3 id="text"> </h3>
+<button id="getNotif" onClick="showOptin();" style="display: none;" type="button" class="btn btn-success">Get Notifications</button>
+</div>
+  </div>
+  
+
+</body>
+</html>
+
