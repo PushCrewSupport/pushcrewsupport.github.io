@@ -53,16 +53,20 @@ function callbackFunction() {
   var getNotif = document.getElementById("getNotif");
  var text = document.getElementById("text");
   if (!pushcrew.subscriberId){
- getNotif.style.display = "block"; 
+           console.log("in no allowed");
+ //getNotif.style.display = "block"; 
 }
 else if(pushcrew.subscriberId===-1)
 {
+         console.log("in blocked");
 text.innerHTML = "Blocked notifications";
 }
 else
 {
+         console.log("in alreafy subscribed");
  text.innerHTML = "Successfully subscribed to Notifications"; 
 }
+       console.log(pushcrew.subscriberId);
 }
 
 function showOptin() {
