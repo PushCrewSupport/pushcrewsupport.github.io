@@ -35,7 +35,7 @@
         s=u.createElement('script');
         s.type='text/javascript';
         s.async=true;
-        s.src='https://cdn.pushcrewstaging.com/js/ec5d3d34a73148e7e0226033d7a411fb.js';
+        s.src='https://cdn.pushcrewstaging.com/js/28bf064f523b504dba3292e914be454e.js';
         h=u.getElementsByTagName('script')[0];
         h.parentNode.insertBefore(s,h);
     })(window,document);
@@ -53,20 +53,20 @@ function callbackFunction() {
   var getNotif = document.getElementById("getNotif");
  var text = document.getElementById("text");
   if (!pushcrew.subscriberId){
-           console.log("in no allowed");
+  console.log("in notifications");
  getNotif.style.display = "block"; 
 }
 else if(pushcrew.subscriberId===-1)
 {
-         console.log("in blocked");
+  console.log("in blocked");
 text.innerHTML = "Blocked notifications";
 }
 else
 {
-         console.log("in alreafy subscribed");
+    console.log("in already");
  text.innerHTML = "Successfully subscribed to Notifications"; 
 }
-       console.log(pushcrew.subscriberId);
+  console.log(pushcrew.subscriberId);
 }
 
 function showOptin() {
@@ -86,6 +86,7 @@ _pcq.push(['subscriptionFailureCallback',callbackFunctionOnFailedSubscription]);
 function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
   getNotif.style.display = "none";
   text.innerHTML = "Successfully subscribed to Notifications";
+  console.log("success callback");
   }
   function callbackFunctionOnFailedSubscription(subscriberId, values) {
   getNotif.style.display = "none";
@@ -96,7 +97,7 @@ function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
 </script>
 
 <script>
-function getUrlParameter(name) {
+/*function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
@@ -104,8 +105,30 @@ function getUrlParameter(name) {
 };
 
 _pcq.push(['tag', 'name', getUrlParameter('a')]);
-console.log(getUrlParameter('a'));
+console.log(getUrlParameter('a'));*/
 </script>
+
+<script src="http://www.geoplugin.net/javascript.gp"></script>
+
+<script>
+  (function() {
+try {
+var city = geoplugin_city();
+var country = geoplugin_countryName();
+console.log(city, country);
+
+} catch(e) {
+        dataLayer.push({
+          'event' : 'Error',
+          'Jserror' : e.message
+        });
+      }
+     
+  })();
+</script>
+
+
+
 
 
 </head>
@@ -120,6 +143,21 @@ console.log(getUrlParameter('a'));
 </div>
   </div>
   
+  <script type="text/javascript">
+    /*_pcq.push(['subscriptionSuccessCallback',callbackOnSuccessfulSubscription]); 
+    function callbackOnSuccessfulSubscription()
+    {
+      _pcq.push(['addSubscriberToSegment', 'free']);
+    }*/
+  </script>
+
+  <script type="text/javascript">
+   /* _pcq.push(['APIReady', callbackFunction]); //check for the readiness of the pushcrew API
+function callbackFunction() {
+_pcq.push(['addSubscriberToSegment', 'members']);
+_pcq.push(['removeSubscriberFromSegment', 'free']);
+}*/
+  </script>
 
 </body>
 </html>
